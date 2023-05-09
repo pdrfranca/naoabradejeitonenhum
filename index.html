@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+		#botao {
+            position: absolute;
+            margin-left: 15vw;
+			padding: 10px 20px;
+			background-color: #af4c4c;
+			color: white;
+			border: none;
+			cursor: pointer;
+		}
+
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+            gap: 20px;
+            overflow: hidden;
+        }
+
+        .button{
+            text-decoration: none;
+            padding: 10px 20px;
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			cursor: pointer;
+        }
+	</style>
+</head>
+<body>
+
+    <h3>Cuzinho hj?</h3>
+
+	<a href="https://www.youtube.com/watch?v=lJBcZHzgD7s" class="button">Sim</a>
+
+	<button id="botao">Não</button>
+
+	<script>
+		var botao = document.getElementById("botao");
+		var larguraTela = window.innerWidth;
+		var alturaTela = window.innerHeight;
+
+		botao.addEventListener("mouseover", function() {
+			var novaPosicaoX = Math.floor(Math.random() * (larguraTela - botao.offsetWidth));
+			var novaPosicaoY = Math.floor(Math.random() * (alturaTela - botao.offsetHeight));
+			botao.style.left = novaPosicaoX + "px";
+			botao.style.top = novaPosicaoY + "px";
+		});
+	</script>
+</body>
+</html>
